@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiqueta para Font Awesome -->
+    <script src="https://kit.fontawesome.com/efb47c59ef.js" crossorigin="anonymous"></script>
+    <title>Sukata Fight Club</title>
+    <!-- Link a hoja de estilo CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Link a flavicon -->
+    <link rel="icon" href="/img/ico_perro.ico">
+    <!-- Link a google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Anton&family=Bebas+Neue&family=Concert+One&family=Montserrat:ital,wght@1,300&family=Russo+One&family=Titillium+Web:wght@200&family=Vina+Sans&display=swap" rel="stylesheet">
+
+    <!-- Link a Animate (animación) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <!--Se agrega animación al nombre del gimansio con Animate -->
+        <div class="contenedor_titulo_header">
+            <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
+            <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
+        </div>
+        
+        <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                        <li><a href="/html/tienda.html">⚫ Tienda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+            <div class="barra_nav">
+                <a href="/html/index.html">Inicio
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/historia.html">Historia
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/profesores.html">Profesores
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/horarios.html">Horarios
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/contacto.html">Contacto
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/tienda.html">Tienda
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seccion presentacion -->
+        <section class="presentacion">
+            <h1>Academia Fight Club Sukata Brothers</h1>
+            <div class="contenedor_presentacion">
+                <div class="imagen"><img src="/img/Sukata-Team.jfif" alt="Sukata-Team"></div>
+                <p>Fundada con la visión de promover el crecimiento personal, la disciplina y el respeto a través de las
+                    artes marciales, esta academia se ha convertido en un faro de inspiración para entusiastas de todas
+                    las edades y niveles de habilidad. Comprometida con la comunidad local, la academia Fight Club
+                    Sukata Brothers no es solo un lugar para aprender Jiu-Jitsu, sino un hogar para aquellos que
+                    comparten una pasión por esta disciplina. Luis Luengo (Lula), lidera con un enfoque único en la
+                    enseñanza y el desarrollo personal, siempre teniendo como máximas la lealtad, el honor y el respeto.
+                    Su experiencia en el arte marcial es ampliamente reconocida por su compromiso con sus alumnos. Los
+                    estudiantes no solo aprenden las técnicas esenciales del Jiu-Jitsu, sino también los valores
+                    fundamentales de respeto, humildad y perseverancia.
+                </p>
+            </div>
+
+
+            <!-- Seccion promocion de cinturones: para cada cinturón se pone un emoji del color que representa y se hace listas anidades-->
+        </section>
+        <section class="promocion">
+            <h1>Técnicas requeridas para la graduación</h1>
+            <div class="contenedor_promocion">
+                <ul class="cinturones">
+                    <li class="azul">
+                        <div>
+                            <h2>Faixa Azul 🔵</h2>
+                        </div>
+                        <ul>
+                            <li>5 lances</li>
+                            <li>15 finalizaciones en la guardia</li>
+                            <li>10 finalizaciones en la montada</li>
+                            <li>12 finalizaciones en 100 kilos</li>
+                            <li>10 finalizaciones en espalda</li>
+                            <li>5 finalizaciones de piernas (rodilla, tobillo y pie) y su salida</li>
+                            <li>3 salidas de arm-lock</li>
+                            <li>3 salidas de triángulo</li>
+                            <li>3 salidas de omoplato</li>
+                            <li>5 saludas de espalda</li>
+                            <li>5 salidas de montada</li>
+                            <li>5 saludas de 100 kilos</li>
+                            <li>15 inversiones de guardia y 1/2 guardia</li>
+                            <li>5 pasajes de guardia y 1/2 guardia</li>
+                            <li>5 técnicas de defensa personal</li>
+                            <li> técnica de movimiento</li>
+                            <li>los 4 manejos con guardia abierta</li>
+                            <li>llamada a la guardia y a 1/2 guardia</li>
+                        </ul>
+                        <p>TIEMPO REQUERIDO: 1 AÑO Y MEDIO LUEGO DE LA GRADUACIÓN ANTERIOR</p>
+                    </li>
+                    <li class="purpura">
+                        <div>
+                            <h2>Faixa Roxa 🟣</h2>
+                        </div>
+                        <ul>
+                            <li>10 lances</li>
+                            <li>25 finalizaciones en la guardia</li>
+                            <li>12 finalizaciones en la montada</li>
+                            <li>15 finalizaciones en 100 kilos</li>
+                            <li> 15 finalizaciones en espalda</li>
+                            <li>10 finalizaciones de piernas (rodilla, tobillo y pie) y su salida</li>
+                            <li>5 salidas de arm-lock</li>
+                            <li>5 salidas de triángulo</li>
+                            <li>5 salidas de omoplato</li>
+                            <li>5 saludas de espalda</li>
+                            <li>5 salidas de montada</li>
+                            <li>5 saludas de 100 kilos</li>
+                            <li>20 inversiones de guardia y 1/2 guardia</li>
+                            <li>10 pasajes de guardia y 1/2 guardia</li>
+                            <li>8 técnicas de defensa personal</li>
+                            <li>técnica de movimiento</li>
+                            <li>técnica de ataque y contraataque</li>
+                            <li>llamada a la guardia y 3 a 1/2 guardia seguido de ataque múltiple</li>
+                            <li>trabajos de guardia sentado y araña</li>
+                            <li>ataques de 1/2 guardia con adversario parado</li>
+                        </ul>
+                        <p>TIEMPO REQUERIDO: 2 AÑOS LUEGO DE LA GRADUACIÓN ANTERIOR</p>
+                    </li>
+                    <li class="marron">
+                        <div>
+                            <h2>Faixa Marrom 🟤</h2>
+                        </div>
+                        <ul>
+                            <li>15 lances</li>
+                            <li>40 finalizaciones en la guardia</li>
+                            <li>15 finalizaciones en la montada</li>
+                            <li>20 finalizaciones en 100 kilos</li>
+                            <li>20 finalizaciones en espalda</li>
+                            <li>15 finalizaciones de piernas (rodilla, tobillo y pie) y su salida</li>
+                            <li>8 salidas de arm-lock</li>
+                            <li>8 salidas de triángulo</li>
+                            <li>8 salidas de omoplato</li>
+                            <li>8 saludas de espalda</li>
+                            <li>8 salidas de montada</li>
+                            <li>8 saludas de 100 kilos</li>
+                            <li>40 inversiones de guardia y 1/2 guardia</li>
+                            <li>15 pasajes de guardia y 1/2 guardia</li>
+                            <li>10 técnicas de defensa personal</li>
+                            <li>técnica de movimiento</li>
+                            <li>técnica de ataque y contraataque</li>
+                            <li>5 llamada a la guardia y 5 a 1/2 guardia seguido de ataque múltiple</li>
+                            <li>trabajos de guardia sentado, guardia araña, guardia x y sentado contra parado y 1/2
+                                guardia</li>
+                        </ul>
+                        <p>TIEMPO REQUERIDO: 2 AÑOS LUEGO DE LA GRADUACIÓN ANTERIOR</p>
+                    </li>
+                    <li class="negro">
+                        <div>
+                            <h2>Faixa Preta ⚫</h2>
+                        </div>
+                        <ul>
+                            <li>20 lances</li>
+                            <li>50 finalizaciones en la guardia</li>
+                            <li>20 finalizaciones en la montada</li>
+                            <li>30 finalizaciones en 100 kilos</li>
+                            <li>25 finalizaciones en espalda</li>
+                            <li>20 finalizaciones de piernas (rodilla, tobillo y pie) y su salida</li>
+                            <li>10 salidas de arm-lock</li>
+                            <li>10 salidas de triángulo</li>
+                            <li>10 salidas de omoplato</li>
+                            <li>10 saludas de espalda</li>
+                            <li>10 salidas de montada</li>
+                            <li>10 saludas de 100 kilos</li>
+                            <li>50 inversiones de guardia y 1/2 guardia</li>
+                            <li>20 pasajes de guardia y 1/2 guardia</li>
+                            <li>15 técnicas de defensa personal</li>
+                            <li>técnica de movimiento</li>
+                            <li>técnica de ataque y contraataque</li>
+                            <li>trabajos de guardia sentado, guardia araña, guardia x y sentado contra parado y 1/2
+                                guardia</li>
+                            <li>Competición mundial CBBJJ o COBJJ</li>
+                            <li>Diploma de primeros auxilios</li>
+                            <li>historia del jiujitsu (desde sus orígenes a la actualidad)</li>
+                        </ul>
+                        <p>TIEMPO REQUERIDO: 2 AÑOS LUEGO DE LA GRADUACIÓN ANTERIOR</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
+    <footer>
+        <h1>Contacto</h1>
+        <div>
+            <a class="mail" href="mailto:sukatafightclub@gmail.com" title="sukatafightclub@gmail.com"><i
+                    class="fa-solid fa-envelope" style="color: #ff6347;"></i><br><br>E-mail</a>
+            <a class="telefono" href="https://wa.me/5491150576363?text=Hola" title="1150576363" target="_blank"><i
+                    class="fa-solid fa-phone" style="color: #ff6347;"></i><br><br>Teléfono</a>
+            <a class="instagram" href="https://www.instagram.com/sukatafightclub/" title="@sukatafightclub"
+                target="_blank"><i class="fa-brands fa-square-instagram"
+                    style="color: #e64533;"></i></i><br><br>Instagram</a>
+            <a class="ubicacion"
+                href="https://www.google.com/maps?ll=-34.613853,-58.448725&z=16&t=m&hl=en&gl=AR&mapclient=embed&q=Pujol+743+C1405ALE+CABA"
+                title="Pujol 743, Buenos Aires, Argentina" target="_blank"><i class="fa-solid fa-location-dot"
+                    style="color: #ff6347;"></i><br><br>Ubicación</a>
+        </div>
+    </footer>
+</body>
+
+</html>

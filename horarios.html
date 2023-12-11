@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiqueta para Font Awesome -->
+    <script src="https://kit.fontawesome.com/efb47c59ef.js" crossorigin="anonymous"></script>
+    <title>Sukata Fight Club</title>
+    <!-- Link a hoja de estilo CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Link a flavicon -->
+    <link rel="icon" href="/img/ico_perro.ico">
+    <!-- Link a google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Anton&family=Bebas+Neue&family=Concert+One&family=Montserrat:ital,wght@1,300&family=Russo+One&family=Titillium+Web:wght@200&family=Vina+Sans&display=swap" rel="stylesheet">
+    <!-- Link a Animate (animación) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <!--Se agrega animación al nombre del gimansio con Animate -->
+        <div class="contenedor_titulo_header">
+            <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
+            <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
+        </div>
+        
+        <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                        <li><a href="/html/tienda.html">⚫ Tienda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+            <div class="barra_nav">
+                <a href="/html/index.html">Inicio
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/historia.html">Historia
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/profesores.html">Profesores
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/horarios.html">Horarios
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/contacto.html">Contacto
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/tienda.html">Tienda
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+    
+    <main>
+        <!--Tabla con horaios-->
+        <section class="tabla">
+            <h1>Horarios de entrenamiento</h1>
+            <table>
+                <tr>
+                    <th rowspan="2">HORARIO</th>
+                    <th colspan="6">DÍA</th>
+                </tr>
+                <tr>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                    <th>Sábado</th>
+                </tr>
+
+                <tr>
+                    <td>8:30</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10:00</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>GI</td>
+                </tr>
+                <tr>
+                    <td>15:00</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>18:00</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                    <td>GI</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>19:30</td>
+                    <td>GI</td>
+                    <td>GI</td>
+                    <td>GI</td>
+                    <td>GI</td>
+                    <td>GI</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>21:00</td>
+                    <td>-</td>
+                    <td>NoGI</td>
+                    <td>-</td>
+                    <td>NoGI</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
+        <!-- Seccion entrenamientos -->
+        <section class="entrenamientos">
+            <h1>Tipos de entrenamiento</h1>
+            <h2>Jiu Jitsu - con GI (GI)</h2>
+            <p>Esta es conocida como la modalidad tradicional del Jiu Jitsu, en donde se enseñan y se asientan las bases
+            del BJJ. Este se enfoca en:
+                <ul>
+<!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                    <li><strong>🥋 Uso de Uniforme (Gi)</strong>: En el Jiu-Jitsu con Gi, los practicantes usan un uniforme
+                    similar a un kimono, que consta de un chaqueta, pantalones y un cinturón. El Gi proporciona agarres y asas adicionales, lo que permite a los luchadores agarrar la ropa de su oponente para ejecutar técnicas de estrangulación, llaves articulares y control.
+                    </li>
+                    <li>
+                        <strong>🥋 Habilidades de Agarre</strong>: Se enfatizan las habilidades de agarre y la capacidad de conservar energía mientras se controla al oponente a través del uso del Gi.
+                    </li>
+                </ul>
+            </p>
+            
+            <h2>Jiu jitsu - sin GI (No-GI)</h2>
+            <ul>
+                <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                <li><strong>🥊 Sin Uniforme Específico</strong>: En el Jiu-Jitsu sin Gi, los practicantes no usan el kimono. En cambio,
+                    usan ropa deportiva ajustada, como rashguards y pantalones cortos o mallas. Esto elimina la posibilidad de agarrar la ropa del oponente.
+                </li>
+                <li>
+                    <strong>🥊 Enfoque en la Agilidad y la Velocidad:</strong> La modalidad No-Gi se enfoca en la agilidad, la velocidad y la adaptabilidad, ya que no hay Gi para agarrar. Los practicantes dependen más de agarres corporales.
+                </li>
+            </ul>
+        </section>
+
+
+    </main>
+
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
+    <footer>
+        <h1>Contacto</h1>
+        <div>
+            <a class="mail" href="mailto:sukatafightclub@gmail.com" title="sukatafightclub@gmail.com"><i
+                    class="fa-solid fa-envelope" style="color: #ff6347;"></i><br><br>E-mail</a>
+            <a class="telefono" href="https://wa.me/5491150576363?text=Hola" title="1150576363" target="_blank"><i
+                    class="fa-solid fa-phone" style="color: #ff6347;"></i><br><br>Teléfono</a>
+            <a class="instagram" href="https://www.instagram.com/sukatafightclub/" title="@sukatafightclub"
+                target="_blank"><i class="fa-brands fa-square-instagram"
+                    style="color: #e64533;"></i></i><br><br>Instagram</a>
+            <a class="ubicacion"
+                href="https://www.google.com/maps?ll=-34.613853,-58.448725&z=16&t=m&hl=en&gl=AR&mapclient=embed&q=Pujol+743+C1405ALE+CABA"
+                title="Pujol 743, Buenos Aires, Argentina" target="_blank"><i class="fa-solid fa-location-dot"
+                    style="color: #ff6347;"></i><br><br>Ubicación</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

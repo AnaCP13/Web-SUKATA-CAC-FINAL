@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiqueta para Font Awesome -->
+    <script src="https://kit.fontawesome.com/efb47c59ef.js" crossorigin="anonymous"></script>
+    <title>Sukata Fight Club</title>
+    <!-- Link a hoja de estilo CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Link a flavicon -->
+    <link rel="icon" href="/img/ico_perro.ico">
+    <!-- Link a google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Anton&family=Bebas+Neue&family=Concert+One&family=Montserrat:ital,wght@1,300&family=Russo+One&family=Titillium+Web:wght@200&family=Vina+Sans&display=swap" rel="stylesheet">
+
+    <!-- Link a Animate (animación) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <header>
+        <!--Se agrega animación al nombre del gimansio con Animate -->
+        <div class="contenedor_titulo_header">
+            <img class="logoizq" src="https://sukatabjj.com/img/logosukata.png" alt="Logo Sukata">
+            <span class="animate__animated animate__rubberBand">Sukata Fight Club</span>
+            <img class="logoder" src="/img/LHR_logo.png" alt="Logo_Pujol">
+        </div>
+        
+        <nav>
+            <!-- Menú tipo hamburguesa para dispsitivos chicos (celulares). Acá se evita el uso de flaticón pen nav para optimizar el espacio -->
+            <div class="hamburguesa_nav">
+                <input type="checkbox">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                <div class="menu">
+                    <ul>
+                        <!-- se usan emoticones en lugar de viñetas para optimizar el diseño -->
+                        <li><a href="/html/index.html">⚫ Inicio</a></li>
+                        <li><a href="/html/historia.html">⚫ Historia</a></li>
+                        <li><a href="/html/profesores.html">⚫ Profesores</a></li>
+                        <li><a href="/html/horarios.html">⚫ Horarios</a></li>
+                        <li><a href="/html/contacto.html">⚫ Contacto</a></li>
+                        <li><a href="/html/tienda.html">⚫ Tienda</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Menú clásico para dispositivos grandes y medianos (noteook y tablet). Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio-->
+            <div class="barra_nav">
+                <a href="/html/index.html">Inicio
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/historia.html">Historia
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/profesores.html">Profesores
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/horarios.html">Horarios
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/contacto.html">Contacto
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                <a href="/html/tienda.html">Tienda
+                    <img class="animate__animated animate__rubberBand"
+                        src="/img/contorno-de-cara-de-bulldog-enojado.png" alt="logo_bulldog">
+                </a>
+                </a>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="altas">
+            <h1>Agregar Productos al Inventario</h1>
+
+            <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
+            <form id="formulario" enctype="multipart/form-data">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" required><br>
+
+                <label for="talle">Talle:</label>
+                <input type="text" id="talle" name="talle"><br>
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" required><br>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required><br>
+
+                <label for="precio">Precio:</label>
+                <input type="number" step="0.01" id="precio" name="precio" required><br>
+
+                <label for="imagenProducto">Imagen del producto:</label>
+                <input type="file" id="imagenProducto" name="imagen">
+        
+                <button type="submit">Agregar Producto</button>
+                <br>
+                <br>
+                <br>
+                <a href="/html/admin.html">Volver al sitio de Administardor</a>
+            </form>
+
+            <script>
+                //const URL = "http://127.0.0.1:5000/"
+
+                //Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
+                const URL = "https:/anaclarap.pythonanywhere.com/"
+        
+
+                // Capturamos el evento de envío del formulario
+                document.getElementById('formulario').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Evitamos que se envie el form 
+
+                    var formData = new FormData();
+                    formData.append('codigo', document.getElementById('codigo').value);
+                    formData.append('descripcion', document.getElementById('descripcion').value);
+                    formData.append('talle', document.getElementById('talle').value);
+                    formData.append('cantidad', document.getElementById('cantidad').value);
+                    formData.append('precio', document.getElementById('precio').value);
+                    formData.append('imagen', document.getElementById('imagenProducto').files[0]);
+            
+                    // Realizamos la solicitud POST al servidor. El método POST se usa para enviar y crear nuevos datos en el servidor.
+                    fetch(URL + 'productos', {
+                        method: 'POST',
+                        body: formData // Aquí enviamos formData. Dado que formData puede contener archivos, no se utiliza JSON.
+                    })
+
+                        //Después de realizar la solicitud POST, se utiliza el método then() para manejar la respuesta del servidor.
+                        .then(function (response) {
+                            if (response.ok) { 
+                                //Si la respuesta es exitosa, convierte los datos de la respuesta a formato JSON.
+                                return response.json(); 
+                            } else {
+                                // Si hubo un error, lanzar explícitamente una excepción
+                                // para ser "catcheada" más adelante
+                                throw new Error('Error al agregar el producto.');
+                            }
+                        })
+
+                        //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
+                        .then(function (data) {
+                            alert('Producto agregado correctamente.');
+                        })
+
+                        // En caso de error, mostramos una alerta con un mensaje de error.
+                        .catch(function (error) {
+                            alert('Error al agregar el producto.');
+                        })
+
+                        // Limpiar el formulario en ambos casos (éxito o error)
+                        .finally(function () {
+                            document.getElementById('codigo').value = "";
+                            document.getElementById('descripcion').value = "";
+                            document.getElementById('talle').value = "";
+                            document.getElementById('cantidad').value = "";
+                            document.getElementById('precio').value = "";
+                            document.getElementById('imagenProducto').value = "";
+                    
+                        });
+                })
+            </script>
+        </section>
+    </main>
+    <!-- Para el FOOTER: Sobre los enlaces de contacto se pone un atributo title para que muestre el dato cuando se posa el cursor por si el usuario no le interesa acceder pero sí visualizar el dato. No se pone el atributo alt porque debajo está la descripción de cara ícono. Se usó Font Awsome para los íconos de contacto, los cuales se presonalizaron antes de ser descargados para que el color siga la línea del sitio. Se usa el atributo target para configurar que abra sobre otra pestaña-->
+    <footer>
+        <h1>Contacto</h1>
+        <div>
+            <a class="mail" href="mailto:sukatafightclub@gmail.com" title="sukatafightclub@gmail.com"><i
+                    class="fa-solid fa-envelope" style="color: #ff6347;"></i><br><br>E-mail</a>
+            <a class="telefono" href="https://wa.me/5491150576363?text=Hola" title="1150576363" target="_blank"><i
+                    class="fa-solid fa-phone" style="color: #ff6347;"></i><br><br>Teléfono</a>
+            <a class="instagram" href="https://www.instagram.com/sukatafightclub/" title="@sukatafightclub"
+                target="_blank"><i class="fa-brands fa-square-instagram"
+                    style="color: #e64533;"></i></i><br><br>Instagram</a>
+            <a class="ubicacion"
+                href="https://www.google.com/maps?ll=-34.613853,-58.448725&z=16&t=m&hl=en&gl=AR&mapclient=embed&q=Pujol+743+C1405ALE+CABA"
+                title="Pujol 743, Buenos Aires, Argentina" target="_blank"><i class="fa-solid fa-location-dot"
+                    style="color: #ff6347;"></i><br><br>Ubicación</a>
+        </div>
+    </footer>
+</body>
+
+</html>

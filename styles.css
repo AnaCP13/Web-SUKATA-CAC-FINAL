@@ -1,0 +1,1065 @@
+ /*--------------------- PARA TODO EL SITIO--------------------- */
+
+ /* Siempre se trató de usar medidas relativas que colaboren con un diseño responsive */
+
+
+ /* LETRA: La letra se estableció en color blanco con un selector universal para ques e vea sobre un fonde de página negro. Para otros colores e letra se establecen en selectores de mayor especificidad */
+ * {
+    color: white;
+}
+
+/* COLOR DE FONDO: Color de fondo de página adaptado al logo y a la temática de la paágina*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+ /* ÍCONOS DE REDES SOCIALES Y CONTACTOS: Para los íconos de todo el sitio se usó Font Awsome. Éstos representan los enlasces de las distintas vías de contacto del gimansio o de los profesores (instagram). Los íconos están animados de para que cuado pase el cursor se agranden */
+.mail,
+.telefono,
+.instagram,
+.ubicacion {
+    transition: transform 0.3s ease;
+}
+.mail:hover,
+.telefono:hover,
+.instagram:hover,
+.ubicacion:hover {
+    transform: scale(1.35);
+}
+
+/* TÍTULOS PRINCIPALES (H1) DE LOS DISTINTOS HTML*/
+.presentacion h1,
+.promocion h1,
+.contenedor_profesores h1,
+.tabla h1,
+.entrenamientos h1,
+.formulario h1,
+.mapa h1,
+.historia h1,
+.altas h1,
+.listado h1,
+.eliminar h1,
+.admin h1,
+.modificaciones h1,
+.tienda h1 {
+    text-align: center;
+    font-family: 'Concert One', sans-serif, "Times New Roman";
+    font-weight: lighter;
+    font-size: 3vw;
+    margin-bottom: 2%;
+    border-bottom: 3px solid tomato;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+/* PARA DISPOSITIVOS CHICOS (celulares): Se agranda el tamaño para todos los títulos principales */
+@media screen and (max-width: 768px) {
+    .presentacion h1,
+    .promocion h1,
+    .contenedor_profesores h1,
+    .tabla h1,
+    .entrenamientos h1,
+    .formulario h1,
+    .mapa h1,
+    .historia h1
+    .altas h1,
+    .listado h1,
+    .eliminar h1,
+    .admin h1,
+    .modificaciones h1,
+    .tienda h1 {
+        font-size: 4vw;
+    }
+}
+
+ /* HEADER */
+
+/* Estilo del título (primera elemento del header): Se agrega animación al nombre del gimansio con Animate y se elije una letra de Google Fonts acorde al tipo de actividad que se desarrolla (fight). Se usó un display flex para poder ubicar los elementos. El color de la letra y del fondo del nombre del club (al igual que tod el sitio) se ajusta a los colores del logo*/
+.contenedor_titulo_header {
+    margin: 1%;
+    background-color: tomato;
+    border-radius: 10px;
+    border-color: black;
+    border-style: dotted;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.contenedor_titulo_header span.animate__rubberBand {
+    font-family: 'Anton', sans-serif, 'Bebas Neue', sans-serif, 'Russo One', sans-serif, 'Titillium Web', sans-serif;
+    font-size: 4.2vw;
+    color: black;
+}
+.logoder {
+    float: right;
+    width: 6vw;
+}
+.logoizq {
+    float: left;
+    width: 6vw;
+}
+
+ /* Estilo del NAV */
+/* PARA TODOS LOS DISPOSITIVOS: El nav horizontal (barra_nav) se lo crea con un contenedor de clase "bara_nav" para aplicar diseño con Grid. Se usó flaticon para cada menú de la barra y tiene la misma animación (Animate) que el nombre del gimansio. Se eligen fuentes locales acordes (al igual que para el resto del sitio dónde se re-utilizan). Se saca el subrayado y se pone en mayúscula. También cambia el color de los textos del nav cuando se pasa el cursor por encima */
+.barra_nav {
+    display: grid;
+    margin: 2%;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: wheat;
+    text-align: center;
+    padding: 1%;
+    align-items: center;
+}
+.barra_nav a img {
+    max-width: 10%;
+    height: auto;
+}
+.barra_nav a {
+    text-decoration: none;
+    font-size: 1.7vw;
+    font-family: 'Vina Sans', sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+/* cambio de color del nav */
+.barra_nav a:hover {
+    color: tomato;
+}
+/* PARA DISPOSITIVOS CHICOS: El nav hamburguesa se lo crea con un contenedor de clase "hamburguesa_nav" para aplicar diseño flex que por defecto esté oculto (display none). El menú se crea como chekbox y se usa Font Awsome que traer los fa-bars (barras del botón de menú) y fa-times (cruz para cerrer el menú).*/
+/* PARA DISPOSITIVOS MEDIANOS: Se mantiene la barra nav original pero con letra más grande*/
+.hamburguesa_nav a {
+    color: black;
+    font-family: impact, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+    border-radius: 10px;
+    max-width: 200px;
+    background: wheat;
+    font-size: 3vw;
+}
+/* creación del checkbox del menú hamburguesa con el fa-bars y fa-times */
+.hamburguesa_nav input[type="checkbox"],
+.hamburguesa_nav .fa-bars,
+.hamburguesa_nav .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    right: 6vw;
+    top: 0;
+    width: 30px;
+    height: 25px;
+}
+.hamburguesa_nav .fa-times {
+    right: 65%
+}
+.hamburguesa_nav .fa-bars,
+.hamburguesa_nav .fa-times {
+    font-size: 30px;
+    pointer-events: none;
+}
+.hamburguesa_nav input[type="checkbox"] {
+    opacity: 0;
+}
+.hamburguesa_nav {
+    color: wheat;
+    position: relative;
+    border-radius: 10 px;
+    min-height: 30px;
+    display: none;
+}
+.hamburguesa_nav .menu li {
+    list-style: none;
+}
+.hamburguesa_nav .menu {
+    display: none;
+}
+/* se configura el mené hamburguesa para que, cuando se haga click sobre el mismo, desaprazca y se depliegue el menú  */
+.hamburguesa_nav input:checked~.menu {
+    display: block;
+}
+.hamburguesa_nav input:checked~.fa-bars {
+    display: none;
+}
+.hamburguesa_nav input:not(:checked)~.fa-times {
+    display: none;
+}
+/* Se usa media queries para hacer responsive a tamaño tablet y mobile:*/
+/* Dispositivos MEDIANOS (tablets): Para el título: se usa el justify content se cambian márgenes y tamaños. Para el nav se agranda la letra */
+@media only screen and (max-width: 992px) {
+    .contenedor_titulo_header {
+        justify-content: space-evenly;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .logoder,
+    .logoizq {
+        width: 7vw;
+    }
+    .contenedor_titulo_header span.animate__rubberBand {
+        font-size: 5.5vw;
+    }
+    .barra_nav a {
+        font-size: 2vw;
+    }
+}
+/* Dispositivos CHICOS (celulares) Para el título: se cambian márgenes y tamaños. Para el nav se oculta el menú original (barra_nav) y se agrega el menú hamburguesa (hamburguesa_nav)*/
+@media only screen and (max-width: 768px) {
+    .contenedor_titulo_header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .contenedor_titulo_header span.animate__rubberBand {
+        font-size: 6vw;
+    }
+    .logoder,
+    .logoizq {
+        width: 7.2vw;
+    }
+    /* para hacer apraecer menu hamburguesa*/
+    .hamburguesa_nav {
+        display: flex;
+        float: right;
+    }
+    /* para hacer desapraecer el menú original de dispositivos más grandes */
+    .barra_nav {
+        display: none;
+    }
+}
+
+/* FOOTER */
+/* PARA TODOS LOS DISPOSITIVOS: Se eligen fuentes locales acordes (al igual que para el resto del sitio dónde se re-utilizan). Se usa flexbox */
+footer h1 {
+    text-align: center;
+    font-family:  'Advent Pro', sans-serif, "Times New Roman";
+    font-size: 2vw;
+    border-bottom: 2px dashed tomato;
+    padding-bottom: 1%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+footer div {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 5%;
+    font-family: 'Advent Pro', sans-serif, "calibri", arial;
+    font-style: oblique;
+    font-size: 1.5vw;
+}
+/* CAMBIOS PARA DISPOSITIVOS MEDIANOS: Se usa media queries para agrandar los tamaños de letras */
+@media screen and (max-width: 992px) {
+    footer h1 {
+        font-size: 3vw;
+    }
+    footer div {
+        font-size: 2vw;
+    }
+}
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se usa media queries para agrandar aún más los tamaños de letras */
+@media screen and (max-width: 768px) {
+    footer h1 {
+        font-size: 3.5vw;
+    }
+    footer div {
+        font-size: 3vw;
+    }
+}
+
+ /*--------------------- PARA TODO EL HTML "INDEX" (INICIO)--------------------- */
+
+ /* INICIO: SECCIÓN PRESENTACIÓN */
+ /* PARA TODOS LOS DISPOSITIVOS: Para la sección presentación se usa Grid. La imagen tiene una transformación que hace que se agrande suevemente cuando el cursosr pasa sobre la misma, pero sin desbordar el contenido de su contenedor y el cursor se pone en pointer  */
+.contenedor_presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    overflow: hidden;
+}
+ /* estilo de la imagen y de su transformación hover */
+.contenedor_presentacion img {
+    grid-column: 1;
+    width: 70%;
+    height: auto;
+    margin-left: 10%;
+    transition: transform 0.3s ease;
+}
+.contenedor_presentacion:hover img {
+    transform: scale(1.35);
+    cursor: pointer;
+}
+/* estilo del párrafo posterior */
+.contenedor_presentacion p {
+    grid-column: 2;
+    font-size: 1.4vw;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    text-align: justify;
+    margin-right: 10%;
+}
+/* CAMBIOS PARA DISPOSITIVOS MEDIANOS: Se aumentó un poco el tamaño de la imagen y se corrió le margen para que la transformación que la agranda no corte la foto */
+@media screen and (max-width: 992px) {
+    .contenedor_presentacion img{
+        height: 80%;
+        margin-left: 15%;
+    }
+}
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se creó una sola columna y se pasó el texto a una segunda fila. La imagen se achicó de tamaño para que visulamente no ocupara casi el campo entero del dispositivo y se pudiera leer el texto. Al texto se le aumentó el tamaño de la letra paa que sea más facil de leer */
+@media screen and (max-width: 768px) {
+    .contenedor_presentacion {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .contenedor_presentacion .imagen{
+        text-align: center;
+        overflow: hidden;
+    }
+    .contenedor_presentacion img{
+        grid-row: 1;
+        margin-left: 0%;
+        height: 40vw;
+        width: auto;
+    }
+    .contenedor_presentacion p{
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 10%;
+        font-size: 3vw;
+    }
+}
+
+ /* INICIO: SECCIÓN PROMOCIÓN */
+ /* PARA TODOS LOS DISPOSITIVOS: Para la sección promoción se usa Grid. Al título de cada cinturón se le agrega una transición de cambio de fondo y tamaño del contenedor cuando se pasa el cursor por encima, además el cursor toma el formato pointer. A los contenedores de los títulos de cada citurón se les pone un margen inferior del color que representa cada uno de ellos */
+.cinturones {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 3%;
+    column-gap: 5%;
+    font-family: 'Vina Sans', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 1.2vw;
+}
+/* estilo del título de los cinturones*/
+.cinturones h2 {
+    background-color: wheat;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    margin-right: 20%;
+    transition: transform 0.3s ease;
+    transition: background 0.5s ease;
+}
+.azul h2{
+    border-bottom: solid blue;
+}
+.purpura h2 {
+    border-bottom: solid purple;
+}
+.marron h2 {
+    border-bottom: solid brown;
+}
+.negro h2 {
+    border-bottom: solid black;
+}
+/* transición de títulos de citurones */
+.azul div:hover h2,
+.purpura div:hover h2,
+.marron div:hover h2,
+.negro div:hover h2 {
+    transform: scale(1.35);
+    background-color: tomato;
+    cursor: pointer;
+}
+/* Se cambian el estilo de las viñetas de la segunda lista desordenada (de técnicas) */
+.azul li,
+.purpura li,
+.marron li,
+.negro li {
+    list-style: disc;
+}
+ /* Se sacan las viñetas de la primera lista desordenada (cinturones) */
+.azul,
+.purpura,
+.marron,
+.negro {
+    list-style: none;
+}
+/* Se cambia la letra de los elementos de la lista */
+.cinturones li li{
+    font-family: 'Concert One', sans-serif;
+}
+/* configuración del párrafo "tiempo requerido" de los cinturones */
+.contenedor_promocion p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: tomato;
+    font-size: 1vw;
+    font-weight: bold;
+}
+/* CAMBIOS PARA DISPOSITIVOS MEDIANOS: Los cinturones se ubicaron en 2 columnas por pantalla y se agrandó la letra */
+@media screen and (max-width: 992px) {
+    .cinturones{
+        grid-template-columns: 2fr 2fr;
+        font-size: 2.3vw;
+    }
+    .contenedor_promocion p{
+        font-size: 1.8vw;
+    }
+}
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Los cinturones se ubicaron en 1 columna por pantalla y se agrandó la letra */
+@media screen and (max-width: 768px) {
+    .cinturones{
+        grid-template-columns: 1fr;
+    }
+    .cinturones{
+        font-size: 2.9vw;
+    }
+    .contenedor_promocion p{
+        font-size: 2.3vw;
+    }
+}
+
+ /*--------------------- PARA TODO EL HTML "HISTORIA"--------------------- */
+/*  PARA TODOS LOS DISPOSITIVOS: Se configura el estilo siguiendo los colores y letras que se veienen usando en el sitio. Para esta sección se usa Grid. Se usan transformaciones: cuando se posiciona en cursor sobre el contenedor el nombre y cargo de la persona de la foto cambia de color, la foto se agranda, el cursor se pone en pointer (cuando se posa sobre la iamgen) y el texto debajo del "cargo" se pone en negrita*/
+/*configuración del estilo de la frase principal para darle improtancia*/
+.historia_frase {
+    text-align: center;
+    font-family: Impact, "Hættenschweiler", 'Arial Narrow Bold', sans-serif;
+    font-size: 2.4vw;
+    color: tomato;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+ /* configuración del contenedor con Grid */
+.contenedor_historia {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    overflow: hidden;
+    padding: 5%;
+}
+.contenedor_historia img {
+    grid-column: 1;
+    grid-row: 1/span 2;
+    width: 45vw;
+    height: auto;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+}
+.contenedor_historia .nombre {
+    grid-column: 2;
+    grid-row: 1;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 2.5vw;
+    border: solid tomato;
+    border-radius: 10%;
+    border-width: 1.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+.contenedor_historia .cargo {
+    grid-row: 2;
+    grid-row: 2;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 2.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+.contenedor_historia .descripcion {
+    grid-column: 1/span 2;
+    grid-row: 3;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 1.5vw;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+/* configuración de las transformaciones*/
+.contenedor_historia:hover .nombre,
+.contenedor_historia:hover .cargo {
+    color: tomato;
+}
+.contenedor_historia:hover img {
+    transform: scale(1.35);
+    cursor: pointer;
+}
+.contenedor_historia:hover .descripcion {
+    font-weight: bold; 
+}
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agranda la letra de la frase principal y de la clase "descripción para facilitar su lectura */
+@media screen and (max-width: 768px) {
+    .contenedor_historia .descripcion, .historia_frase{
+    font-size: 3vw;
+    }
+}
+
+ /*--------------------- PARA TODO EL HTML "PROFESORES"--------------------- */
+
+ /* PARA TODOS LOS DISPOSITIVOS: Se sigue con la misma gama de clores y estilos de letras. Para los profesores se usa Grid. Se usan transformaciones para que cuando pase el cursor por el contenedor de cada profesor: cambia de color de fondo, el nombre se agranda, los textos debajo del título cambian de color de letra y se ponen en negrita y la foto se agranda. Cuando además de entrar al contenedor, el cursor se posiciona por encima de la foto, el mismo se pone en pointer */
+/* configuración del del Grid */
+.contenedor_tarjeta {
+    display: grid;
+    row-gap: 4%;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto, auto, auto, auto;
+    align-items: center;
+    border-bottom: 1px dashed tomato;
+    overflow: hidden;
+    margin: 2%;
+    border-radius: 5px;
+}
+.contenedor_tarjeta img {
+    grid-column: 1;
+    grid-row: span 4;
+    width: 60%;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    transition: transform 0.3s ease;
+}
+.contenedor_tarjeta h2 {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 2vw;
+    color: tomato;
+    margin-left: 5%;
+    margin-right: 5%;
+    transition: background-color 0.3s ease;
+}
+.contenedor_tarjeta p {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.contenedor_tarjeta ul {
+    grid-column: 2;
+    grid-row: 3;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 1.3vw;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.contenedor_tarjeta a {
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+ /* configuración de las transformaciones */
+.contenedor_tarjeta:hover {
+    background-color: wheat;
+}
+.contenedor_tarjeta:hover h2 {
+    font-size: 2.5vw;
+}
+.contenedor_tarjeta:hover p,
+.contenedor_tarjeta:hover li,
+.contenedor_tarjeta:hover a {
+    color: black;
+    font-weight: bold;
+}
+.contenedor_tarjeta:hover img {
+    transform: scale(1.35);
+    cursor: pointer;
+}
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agrandan las lestras y se achican los márgenes para que entre todo el contenido. Se reconfigura la traformación del aumento de letra del nombre del profesor para que quede más grande */
+@media screen and (max-width: 768px) {
+    .contenedor_tarjeta h2{
+        font-size: 3.5vw;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
+    .contenedor_tarjeta p,.contenedor_tarjeta ul{
+        font-size: 2vw;
+        margin-left: 1%;
+        margin-right: 1%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .contenedor_tarjeta:hover h2 {
+        font-size: 4vw;
+    }
+}
+
+ /*--------------------- PARA TODO EL HTML "HORARIOS"--------------------- */
+
+/* HORARIOS: SECCIÓN TABLA/
+/* PARA TODOS LOS DISPOSITIVOS: Se crea una tabla con los horarios a la cual se le da un estilo particular manteniedo la gama de colores del sitio y se configura para que las celdas tengan distintos colores para eso se usa un selector de pseudoclase. Se agregan transformaciones a la tabla: al pasar el cursor por encima de la tabla se agrada suavemente y cambia el color de fondo y de letra cuando se pasa por encima de las celdas*/
+.tabla {
+    margin-bottom: 0%;
+}
+.tabla table{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+.tabla table,
+th,
+td {
+    border: solid wheat;
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: none;
+    transition: background-color 0.3s ease;
+}
+/* configuración de los colores de las celdas con pseudoclase*/
+.tabla tr:nth-child(even) {
+    background-color: #34495E;
+}
+/* transforamaciones de la tabla*/
+.tabla:hover table {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+.tabla th:hover,
+.tabla td:hover {
+    background-color: wheat;
+    color: black;
+}
+
+ /* HORARIOS: SECCIÓN ENTRENAMIENTO */
+/* PARA TODOS LOS DISPOSITIVOS: Se configura el estilo de los párrafos y listas de la sección entretenimientos, a la ,ista se les sacan las viñetas porque se usan emoticones referidos a cada tipo de entrenamiento (en html) */
+.entrenamientos {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.entrenamientos h2 {
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 2vw;
+    color: tomato;
+    text-decoration: underline wavy;
+}
+.entrenamientos p,
+.entrenamientos li {
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-size: 1.8vw;
+    text-align: justify;
+}
+.entrenamientos ul {
+    list-style-type: none;
+}
+/* PARA DISPOSITIVOS CHICOS: Se agranda la tabla y la letra de esta sección */
+@media screen and (max-width: 768px) {
+    .entrenamientos h2, .entrenamientos p, .entrenamientos li{
+        font-size: 3vw;
+    }
+    .tabla table, th, td {
+        font-size: 3vw;
+}
+}
+
+ /*--------------------- PARA TODO EL HTML "CONTACTO"--------------------- */
+
+ /* CONTACTO: SECCIÓN FORMULARIOS */
+
+ /* PARA TODOS LOS DISPOSITIVOS: Se aplica estilos al fieldset y a los elementos del formulario dentro del fieldset: label, legend, los imputs y textarea, y del botón submit. Se agregan transformaciones al botón submit para que cambie de color y el cursor se ponga en pointer cuando se pasa por encima del mismo */
+fieldset {
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+fieldset label {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+fieldset legend {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold;
+    color: tomato;
+    font-size: larger;
+}
+fieldset input[type="text"],
+fieldset textarea {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    color: black;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+}
+fieldset button[type="submit"] {
+    background-color: tomato;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    border: none;
+    padding: 1% 4%;
+    border-radius: 10%;
+}
+/* transformaciones del botón*/
+fieldset button[type="submit"]:hover {
+    background-color:#FFCC89;
+    cursor: pointer;
+}
+
+ /* CONTACTO: SECCIÓN MAPA */
+
+ /* PARA TODOS LOS DISPOSITIVOS: Se le da estilo para el iframe del mapa */
+.mapa iframe {
+    align-content: center;
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+
+ /*--------------------- PARA TODO EL HTML "TIENDA"--------------------- */
+.contenedor-centrado {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.tienda h2 {
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    text-align: center;
+    text-decoration: none;
+    color: #ff5733;
+    font-size: 3 vw;
+}
+
+.tienda h3{
+    font-family: 'Anton', sans-serif, 'Bebas Neue', sans-serif, 'Russo One', sans-serif, 'Titillium Web', sans-serif;
+    font-weight: lighter;
+    font-size: 2vw;
+}
+.tienda h3:hover{
+    transform: scale(1.35);
+    background-color: tomato;
+    cursor: pointer;
+    transition:  2s;
+}
+
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agranda la letra de la frase principal y links para facilitar su lectura. Los links cambian el estilo de letra */
+@media screen and (max-width: 768px) {
+    .tienda h2 {
+    font-size: 3vw;
+    }
+    .tienda h3{
+        font-size: 3vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+/*--------------------- PARA TODO EL HTML "ADMIN"--------------------- */
+
+/* TIENDA SUKATA: TABLA/
+/* PARA TODOS LOS DISPOSITIVOS: Se crea una tabla a la cual se le da un estilo particular manteniedo la gama de colores del sitio y se configura para que las celdas tengan distintos colores para eso se usa un selector de pseudoclase. Se agregan transformaciones a la tabla: al pasar el cursor por encima de la tabla se agrada suavemente y cambia el color de fondo y de letra cuando se pasa por encima de las celdas*/
+.tabla {
+    margin-bottom: 0%;
+}
+.admin table {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: wheat;
+        border-radius: 5px;
+        font-size: 1.6vw;
+        transition: background-color 0.3s ease;
+}
+
+
+.admin a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Advent Pro', sans-serif, "calibri", arial;
+    font-weight: bolder;
+}
+
+/* configuración de los colores de las celdas con pseudoclase*/
+.admin tr:nth-child(even) {
+    background-color: #FFCC89;
+}
+
+/* transforamaciones de la tabla*/
+.tabla:hover table,
+.admin:hover table {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+.admin th:hover,
+.admin td:hover {
+    background-color: tomato;
+}
+.admin h2 {
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    text-align: center;
+    text-decoration: none;
+    color: #ff5733;
+    font-size: 2.3vw;
+}
+
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agranda la letra de la frase principal */
+@media screen and (max-width: 768px) {
+    .admin h2 {
+    font-size: 3vw;
+    }
+}
+
+/*--------------------- PARA TODO EL HTML "LISTADO"--------------------- */
+
+/* TABLA/
+/* PARA TODOS LOS DISPOSITIVOS: Se crea una tabla a la cual se le da un estilo particular manteniedo la gama de colores del sitio y se configura para que las celdas tengan distintos colores para eso se usa un selector de pseudoclase. Se agregan transformaciones a la tabla: al pasar el cursor por encima de la tabla se agrada suavemente y cambia el color de fondo y de letra cuando se pasa por encima de las celdas*/
+
+
+.listado table{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.listado table,
+.listado th,
+.listado td {
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-style: none;
+    transition: background-color 0.3s ease;
+}
+
+.listado a{
+    color: #FFCC89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+
+}
+
+.listado a:hover {
+    color: tomato;
+}
+
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agranda la letra de la frase principal */
+@media screen and (max-width: 768px) {
+    .listado a {
+    font-size: 3vw;
+    }
+    .listado table,
+    .listado th,
+    .listado td {
+    font-size: 2.5vw;
+    }
+}
+
+
+/*--------------------- PARA TODO EL HTML "LISTADO ELIMINAR"--------------------- */
+
+/* TABLA/
+/* PARA TODOS LOS DISPOSITIVOS: Se crea una tabla a la cual se le da un estilo particular manteniedo la gama de colores del sitio y se configura para que las celdas tengan distintos colores para eso se usa un selector de pseudoclase. Se agregan transformaciones a la tabla: al pasar el cursor por encima de la tabla se agrada suavemente y cambia el color de fondo y de letra cuando se pasa por encima de las celdas*/
+
+
+.eliminar table{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.eliminar table,
+.eliminar th,
+.eliminar td {
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-style: none;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar a{
+    color: #FFCC89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+
+}
+.eliminar a:hover {
+    color: tomato;
+}
+
+.eliminar button{
+    padding: 10%;
+    margin:5%;
+    background-color: #FFCC89;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif, "Hættenschweiler", "Times New Roman";
+    font-weight: bold;
+}
+
+.eliminar button:hover {
+    background-color:tomato;
+}
+
+
+/* CAMBIOS PARA DISPOSITIVOS CHICOS: Se agranda la letra de la frase principal */
+@media screen and (max-width: 768px) {
+    .eliminar a {
+    font-size: 3vw;
+    }
+    .listado table,
+    .listado th,
+    .listado td {
+    font-size: 2.5vw;
+    }
+}
+
+ /*--------------------- PARA TODO EL HTML "ALTAS"--------------------- */
+
+ /* FORMULARIO */
+
+ /* PARA TODOS LOS DISPOSITIVOS: Se aplica estilos al fieldset y a los elementos del formulario dentro del fieldset: label, legend, los imputs y textarea, y del botón submit. Se agregan transformaciones al botón submit para que cambie de color y el cursor se ponga en pointer cuando se pasa por encima del mismo */
+#formulario {
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#formulario label {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+#formulario input[type="text"],
+#formulario input[type="number"],
+#formulario textarea {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    color: black;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+}
+#formulario button[type="submit"] {
+    background-color: tomato;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    border: none;
+    padding: 1% 4%;
+    border-radius: 10%;
+}
+/* transformaciones del botón*/
+#formulario button[type="submit"]:hover {
+    background-color:#FFCC89;
+    cursor: pointer;
+}
+
+.altas a{
+    color: #FFCC89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.altas a:hover {
+    color: tomato;
+}
+
+
+ /*--------------------- PARA TODO EL HTML "MODIFICACIONES"--------------------- */
+
+ /* FORMULARIO */
+
+ /* PARA TODOS LOS DISPOSITIVOS: Se aplica estilos al fieldset y a los elementos del formulario dentro del fieldset: label, legend, los imputs y textarea, y del botón submit. Se agregan transformaciones al botón submit para que cambie de color y el cursor se ponga en pointer cuando se pasa por encima del mismo */
+.modificaciones form {
+    border: 2px solid #ff5733;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.modificaciones label {
+    display: block;
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.modificaciones input[type="text"],
+.modificaciones input[type="number"],
+.modificaciones textarea {
+    width: 100%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border-radius: 5px;
+    color: black;
+    box-sizing: border-box;
+    color: black;
+    font-weight: bold;
+}
+.modificaciones button[type="submit"] {
+    background-color: tomato;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    border: none;
+    padding: 1% 4%;
+    border-radius: 10%;
+}
+/* transformaciones del botón*/
+.modificaciones button[type="submit"]:hover {
+    background-color:#FFCC89;
+    cursor: pointer;
+}
+
+.modificaciones a{
+    color: #FFCC89;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.modificaciones a:hover {
+    color: tomato;
+}
+ /* ------------------------------------------------- */
